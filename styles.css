@@ -101,6 +101,7 @@ a, a:visited {
 
 .nav__list > li {
     padding: 15px;
+    text-align: center;
 }
 
 .main {
