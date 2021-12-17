@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Casos confirmados de Covid</title>
 </head>
 <body>
-    <header></header>
-    <main id="selectCountry"></main>
+    <header class="header">
+        <div id="menu" class="menu">
+            <svg class="menu__mobile"  viewBox="0 0 46 34.5" stroke-linecap="round" stroke-width="6px">
+                <line x1="3" y1="17.25" x2="43" y2="17.25"/>
+                <line x1="3" y1="31.5" x2="43" y2="31.5"/>
+                <line x1="3" y1="3" x2="43" y2="3"/>
+            </svg>
+        </div>
+        <div class="header__title">         
+            <h1>Vacunación contra el COVID-19 por pais</h1>
+            <h3>Seleciona un país para obtener información del porcentaje de su población vacunada.</h3>
+        </div>        
+    </header>
+    <nav id="nav" class="nav--hide">
+        <ul class="nav__list">
+            <li>Numero de Casos</li>
+            <li>Muertes Confirmadas</li>
+            <li>Pacientes Recuperados</li>
+            <li>
+                <a href="https://github.com/M-Media-Group/Covid-19-API">Información de la API de consulta</a>
+            </li>
+            </a>
+        </ul>
+    </nav>
+    <main id="selectCountry" class="main"></main>
+    <!-- <div id="transition" class="div__transition--hide">Cargando Información...</div> -->
+    <button id="buttonResult" class="button__hide" onclick="mainShow()">Consultar otro País</button>
+    <section id="showResult" class="section__result"></section>
+    <footer class="footer">
+        <p>Información proporcionada por <span>MMediaGroupLtd</span>
+        desde su API pública:</p>
+        <p><span>https://covid-api.mmediagroup.fr/v1</span> </p>
+    </footer>
+
     <script src="./index.js"></script>
 </body>
 </html>
